@@ -22,7 +22,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - Solution URL: [Github](https://github.com/mythbus0/frontendmentor_recipe_page)
-- Live Site URL: [Github Page](https://your-live-site-url.com)
+- Live Site URL: [Github Page](https://mythbus0.github.io/frontendmentor_recipe_page/)
 
 ## My process
 
