@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  --p-size: 16px;
+
+  --view-mobile: 375px;
+  --view-desktop: 1440px;
+
+  --font-young-serif: "Young Serif", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --weight-normal: 400;
+  --weight-medium: 600;
+  --weight-bold: 700;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--stone-100);
+}
+
+.container {
+  margin: 3rem auto;
+
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  @media (width < 700px) {
+    margin: 0 auto;
+    border-radius: 0rem;
+  }
+
+  @media (width < 375px) {
+    padding: 0;
+  }
+
+  background-color: var(--white);
+
+  font-family: var(--font-outfit);
+  font-weight: var(--weight-normal);
+  color: var(--stone-600);
+  font-size: var(--p-size);
+
+  .banner {
+    img {
+      @media (width <375px) {
+        border-radius: 0;
+      }
+      border-radius: 0.5rem;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  p,
+  li {
+    line-height: 1.6;
+  }
+  b {
+    font-weight: var(--weight-medium);
+  }
+  h1,
+  h2 {
+    font-family: var(--font-young-serif);
+  }
+  h1 {
+    color: var(--stone-900);
+  }
+
+  h2 {
+    color: var(--brown-800);
+  }
+
+  section:not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    position: relative;
+    left: 1rem;
+  }
+
+  li {
+    /* list-style-position: outside; */
+    /* position: relative; */
+    span {
+      display: block;
+      position: relative;
+      left: 1rem;
+    }
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+    &::marker {
+      color: var(--brown-800);
+      font-size: 0.75rem;
+    }
+  }
+
+  ol li::marker {
+    font-weight: var(--weight-medium);
+    font-size: var(--p-size);
+    font: normal var(--weight-medium) 1rem/1.5 "Outfit", "Arial", sans-serif;
+  }
+
+  .prep_time {
+    background-color: var(--rose-50);
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    h3 {
+      color: var(--rose-800);
+      margin-top: 0;
+    }
+
+    li::marker {
+      color: var(--rose-800);
+    }
+  }
+
+  table {
+    width: 100%;
+
+    td {
+      padding: 1rem;
+    }
+    tr:not(:last-child) td {
+      border-bottom: 1px solid var(--stone-150);
+    }
+
+    td:nth-child(2) {
+      color: var(--brown-800);
+      font-weight: var(--weight-bold);
+    }
+  }
+
+  main {
+    @media (width < 375px) {
+      padding: 0.5rem 2rem;
+    }
+  }
+}
